@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "OrderService\OrderService.csproj", "{4AE0134E-6543-4A82-99A2-65CF8217CEE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C943287-3982-4B78-A77D-DB13F880300D}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Common", "Ecommerce.Common\Ecommerce.Common.csproj", "{0A48AE86-2691-410F-AACB-233491E0255A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AE0134E-6543-4A82-99A2-65CF8217CEE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AE0134E-6543-4A82-99A2-65CF8217CEE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AE0134E-6543-4A82-99A2-65CF8217CEE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AE0134E-6543-4A82-99A2-65CF8217CEE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A48AE86-2691-410F-AACB-233491E0255A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A48AE86-2691-410F-AACB-233491E0255A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A48AE86-2691-410F-AACB-233491E0255A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A48AE86-2691-410F-AACB-233491E0255A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
