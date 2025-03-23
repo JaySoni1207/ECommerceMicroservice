@@ -19,7 +19,7 @@ public class OrderController : ControllerBase
     public async Task<IActionResult> CreateOrder([FromBody] CreateOrderCommand command)  
     {  
         var order = await _mediator.Send(command);
-        return CreatedAtAction(nameof(GetOrderById), new { id = order.Id }, order);
+        return CreatedAtAction(nameof(GetOrderById), new { id = order.OrderReference }, order);
     }  
 
     [HttpGet("{id}")]

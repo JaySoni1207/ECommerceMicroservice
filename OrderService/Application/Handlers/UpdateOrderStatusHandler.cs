@@ -1,7 +1,7 @@
 using Ecommerce.Common.Shared.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using OrderService.Shared.Data;
+using OrderService.Infrastructure.Data;
 using OrderService.Shared.Models.Application.Commands;
 
 namespace OrderService.Application.Handlers;

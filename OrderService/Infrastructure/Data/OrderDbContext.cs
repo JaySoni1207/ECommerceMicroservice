@@ -1,16 +1,19 @@
-using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using OrderService.Shared.Models;
 
-namespace OrderService.Shared.Data;
+namespace OrderService.Infrastructure.Data;
 
-public class OrderDbContext(DbContextOptions<OrderDbContext> options) : DbContext(options)
+public class OrderDbContext : DbContext
 {
-    public DbSet<Order> Orders { get; set; } 
-    
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    public OrderDbContext()
     {
-        // Automatically apply all configurations in the assembly
-        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        
     }
+    
+    public OrderDbContext(DbContextOptions<OrderDbContext> options)
+        : base(options)
+    {
+    }
+    
+    public virtual DbSet<Order> Orders { get; set; }
 }

@@ -1,8 +1,7 @@
 using System.Reflection;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
-using OrderService.Shared.Data;
-using MediatR;
+using OrderService.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -3,7 +3,7 @@ using Mapster;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
-using OrderService.Shared.Data;
+using OrderService.Infrastructure.Data;
 using OrderService.Shared.Models;
 using OrderService.Shared.Models.Application.Queries;
 using OrderService.Shared.Models.Responses;

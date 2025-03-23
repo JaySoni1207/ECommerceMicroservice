@@ -1,13 +1,15 @@
 using Ecommerce.Common.Shared.Enums;
+using Mapster;
 using MediatR;
-using OrderService.Shared.Data;
+using OrderService.Infrastructure.Data;
 using OrderService.Shared.Models;
 using OrderService.Shared.Models.Application.Commands;
+using OrderService.Shared.Models.Responses;
 
 namespace OrderService.Application.Handlers;
-public class CreateOrderHandler(OrderDbContext dbContext) : IRequestHandler<CreateOrderCommand, Order>
+public class CreateOrderHandler(OrderDbContext dbContext) : IRequestHandler<CreateOrderCommand, OrderDetailResponse>
 {
-    public async Task<Order> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
+    public async Task<OrderDetailResponse> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
         var order = new Order
         {
@@ -21,6 +23,6 @@ public class CreateOrderHandler(OrderDbContext dbContext) : IRequestHandler<Crea
         dbContext.Orders.Add(order);
         await dbContext.SaveChangesAsync();
 
-        return order;
+        return order.Adapt<OrderDetailResponse>();
     }
 }
